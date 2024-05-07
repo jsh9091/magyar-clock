@@ -1,13 +1,33 @@
 .background {
-  viewport-fill: red;
+  viewport-fill: black;
 }
 
-#myLabel {
-  font-size: 80;
+#clockLabel {
+  font-size: 100;
   font-family: System-Bold;
-  text-length: 32;
+  text-length: 80;
   text-anchor: middle;
   x: 50%;
-  y: 50%+40;
-  fill: white;
+  y: 50%;
+  fill: aqua
+}
+
+#hungarianHourLabel {
+  font-size: 60;
+  font-family: System-Bold;
+  text-length: 100;
+  text-anchor: middle;
+  x: 50%;
+  y: 50%+90;
+  fill: aqua
+}
+
+#hungarianMinuteLabel {
+  font-size: 50;
+  font-family: System-Bold;
+  text-length: 100;
+  text-anchor: middle;
+  x: 50%;
+  y: 50%+150;
+  fill: aqua
 }

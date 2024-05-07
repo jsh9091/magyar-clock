@@ -13,19 +13,19 @@ function zeroPad(i) {
 clock.granularity = "minutes";
 
 // Get a handle on the <text> element
-const myLabel = document.getElementById("myLabel");
+const clockLabel = document.getElementById("clockLabel");
+const hungarianHourLabel = document.getElementById("hungarianHourLabel");
+const hungarianMinuteLabel = document.getElementById("hungarianMinuteLabel");
 
 // Update the <text> element every tick with the current time
 clock.ontick = (evt) => {
   let today = evt.date;
   let hours = today.getHours();
-  if (preferences.clockDisplay === "12h") {
-    // 12h format
-    hours = hours % 12 || 12;
-  } else {
-    // 24h format
-    hours = zeroPad(hours);
-  }
+  // 12h format
+  hours = hours % 12 || 12;
   let mins = zeroPad(today.getMinutes());
-  myLabel.text = `${hours}:${mins}`;
+  clockLabel.text = `${hours}:${mins}`;
+
+  hungarianHourLabel.text = "Négy"
+  hungarianMinuteLabel.text = "Negyvenkét"
 }

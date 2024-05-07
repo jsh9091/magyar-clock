@@ -1,3 +1,5 @@
 <svg class="background">
-  <text id="myLabel" />
+  <text id="clockLabel" />
+  <text id="hungarianHourLabel" />
+  <text id="hungarianMinuteLabel" />
 </svg>
