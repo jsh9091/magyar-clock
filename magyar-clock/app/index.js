@@ -26,6 +26,6 @@ clock.ontick = (evt) => {
   let mins = zeroPad(today.getMinutes());
   clockLabel.text = `${hours}:${mins}`;
 
-  hungarianHourLabel.text = "Négy"
+  hungarianHourLabel.text = "Négy" + " :"
   hungarianMinuteLabel.text = "Negyvenkét"
 }

@@ -14,7 +14,7 @@
 
 #hungarianHourLabel {
   font-size: 60;
-  font-family: System-Bold;
+  font-family: System-Regular;
   text-length: 100;
   text-anchor: middle;
   x: 50%;
@@ -24,7 +24,7 @@
 
 #hungarianMinuteLabel {
   font-size: 50;
-  font-family: System-Bold;
+  font-family: System-Regular;
   text-length: 100;
   text-anchor: middle;
   x: 50%;
