@@ -12,6 +12,16 @@
   fill: aqua
 }
 
+#amPmLabel {
+  font-size: 35;
+  font-family: System-Bold;
+  text-length: 30;
+  text-anchor: end;
+  x: 100%;
+  y: 50%;
+  fill: aqua
+}
+
 #hungarianHourLabel {
   font-size: 50;
   font-family: System-Regular;

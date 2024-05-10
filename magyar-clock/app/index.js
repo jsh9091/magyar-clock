@@ -14,6 +14,7 @@ clock.granularity = "minutes";
 
 // Get a handle on the <text> element
 const clockLabel = document.getElementById("clockLabel");
+const amPmLabel = document.getElementById("amPmLabel");
 const hungarianHourLabel = document.getElementById("hungarianHourLabel");
 const hungarianMinuteLabel = document.getElementById("hungarianMinuteLabel");
 
@@ -25,13 +26,12 @@ clock.ontick = (evt) => {
   // 12h format
   let hours = rawHours % 12 || 12;
 
-  // if the current time is in the PM show a dot after the clock
-  let showPmDot = (rawHours >= 12)
-
   let mins = today.getMinutes()
   let displayMins = zeroPad(mins);
-  
-  clockLabel.text = `${hours}:${displayMins}` + (showPmDot ? "." : "");
+
+  clockLabel.text = `${hours}:${displayMins}`
+
+  amPmLabel.text = (rawHours >= 12) ? "PM" : "AM"
 
   hungarianHourLabel.text = hungarianNums[hours] + " :"
   hungarianMinuteLabel.text = hungarianNums[mins]
