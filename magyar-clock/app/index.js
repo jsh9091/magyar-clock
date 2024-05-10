@@ -20,12 +20,18 @@ const hungarianMinuteLabel = document.getElementById("hungarianMinuteLabel");
 // Update the <text> element every tick with the current time
 clock.ontick = (evt) => {
   let today = evt.date;
-  let hours = today.getHours();
+  let rawHours = today.getHours();
+  
   // 12h format
-  hours = hours % 12 || 12;
+  let hours = rawHours % 12 || 12;
+
+  // if the current time is in the PM show a dot after the clock
+  let showPmDot = (rawHours >= 12)
+
   let mins = today.getMinutes()
   let displayMins = zeroPad(mins);
-  clockLabel.text = `${hours}:${displayMins}`;
+  
+  clockLabel.text = `${hours}:${displayMins}` + (showPmDot ? "." : "");
 
   hungarianHourLabel.text = hungarianNums[hours] + " :"
   hungarianMinuteLabel.text = hungarianNums[mins]
