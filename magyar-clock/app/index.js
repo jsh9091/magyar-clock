@@ -23,8 +23,9 @@ clock.ontick = (evt) => {
   let hours = today.getHours();
   // 12h format
   hours = hours % 12 || 12;
-  let mins = zeroPad(today.getMinutes());
-  clockLabel.text = `${hours}:${mins}`;
+  let mins = today.getMinutes()
+  let displayMins = zeroPad(mins);
+  clockLabel.text = `${hours}:${displayMins}`;
 
   hungarianHourLabel.text = hungarianNums[hours] + " :"
   hungarianMinuteLabel.text = hungarianNums[mins]
