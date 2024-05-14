@@ -13,13 +13,17 @@
     "appDisplayName": "Magyar Clock",
     "iconFile": "resources/icon.png",
     "wipeColor": "#ffffff",
-    "requestedPermissions": [],
+    "requestedPermissions": [
+      "access_activity",
+      "user-activity"
+    ],
     "buildTargets": [
       "atlas",
       "vulcan"
     ],
     "i18n": {},
     "defaultLanguage": "en-US"
+    
   },
   "scripts": {
     "build": "fitbit-build",

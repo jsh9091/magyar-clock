@@ -2,13 +2,23 @@
   viewport-fill: black;
 }
 
+#stepCountLabel {
+  font-size: 30;
+  font-family: System-Regular;
+  text-length: 80;
+  text-anchor: start;
+  x: 10%;
+  y: 20%;
+  fill: aqua
+}
+
 #clockLabel {
   font-size: 100;
   font-family: System-Bold;
   text-length: 80;
   text-anchor: middle;
   x: 50%;
-  y: 50%;
+  y: 55%;
   fill: aqua
 }
 
@@ -18,7 +28,7 @@
   text-length: 30;
   text-anchor: end;
   x: 100%;
-  y: 50%;
+  y: 55%;
   fill: aqua
 }
 
@@ -38,6 +48,6 @@
   text-length: 100;
   text-anchor: middle;
   x: 50%;
-  y: 50%+145;
+  y: 50%+140;
   fill: aqua
 }
