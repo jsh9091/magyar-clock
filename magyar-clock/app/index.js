@@ -31,7 +31,7 @@ import { battery } from "power";
 // Update the clock every minute
 clock.granularity = "minutes";
 
-// Get a handle on the <text> element
+// Get a handle on the <text> elements
 const stepCountLabel = document.getElementById("stepCountLabel");
 const batteryLabel = document.getElementById("batteryLabel");
 const clockLabel = document.getElementById("clockLabel");
@@ -79,8 +79,8 @@ clock.ontick = (evt) => {
   amPmLabel.text = rawHours >= 12 ? "PM" : "AM";
 
   // display Hungairan words for current time
-  hungarianHourLabel.text = hungarianNums[hours] + " :";
-  hungarianMinuteLabel.text = hungarianNums[mins];
+  hungarianHourLabel.text = `${hungarianNums[hours]}:`;
+  hungarianMinuteLabel.text = `${hungarianNums[mins]}`;
 };
 
 /**
@@ -105,7 +105,7 @@ function getSteps() {
     raw: val,
     formatted:
       val > 999
-        ? Math.floor(val / 1000) + "," + ("00" + (val % 1000)).slice(-3)
+        ? `${Math.floor(val / 1000)},${("00" + (val % 1000)).slice(-3)}`
         : val,
   };
 }
