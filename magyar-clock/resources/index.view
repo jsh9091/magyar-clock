@@ -1,5 +1,6 @@
 <svg class="background">
   <text id="stepCountLabel" />
+  <text id="batteryLabel" />
   <text id="clockLabel" />
   <text id="amPmLabel" />
   <text id="hungarianHourLabel" />

@@ -3,6 +3,7 @@ import * as document from "document";
 import { preferences } from "user-settings";
 import { today as activity } from "user-activity";
 import { me as appbit } from "appbit";
+import { battery } from "power";
 
 function zeroPad(i) {
   if (i < 10) {
@@ -16,10 +17,15 @@ clock.granularity = "minutes";
 
 // Get a handle on the <text> element
 const stepCountLabel = document.getElementById("stepCountLabel");
+const batteryLabel = document.getElementById("batteryLabel");
 const clockLabel = document.getElementById("clockLabel");
 const amPmLabel = document.getElementById("amPmLabel");
 const hungarianHourLabel = document.getElementById("hungarianHourLabel");
 const hungarianMinuteLabel = document.getElementById("hungarianMinuteLabel");
+
+battery.onchange = (charger, evt) => {
+  batteryLabel.text = battery.chargeLevel;
+}
 
 // Update the <text> element every tick with the current time
 clock.ontick = (evt) => {
