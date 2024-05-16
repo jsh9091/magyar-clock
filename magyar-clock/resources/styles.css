@@ -21,10 +21,6 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
-/*
-.background {
-  viewport-fill: yellow;
-}  */
 
 #stepCountLabel {
   font-size: 30;
@@ -41,9 +37,16 @@
   font-family: System-Regular;
   text-length: 80;
   text-anchor: end;
-  x: 90%;
+  x: 84%;
   y: 20%;
   fill: aqua
+}
+
+#batteryIcon {
+  x: 86%;
+  y: 14%;
+  width: "35";
+  height: "20" 
 }
 
 #clockLabel {
