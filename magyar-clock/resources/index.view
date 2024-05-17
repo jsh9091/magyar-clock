@@ -25,7 +25,10 @@
   <rect x="0" y="0" width="100%" height="30%" fill="black" />
   <rect x="5" y="30%" width="97%" height="30%" fill="aqua" />
   <rect x="0" y="60%" width="100%" height="45%" fill="black" />
-  <text id="stepCountLabel" />
+  <g id="stepsBox">
+    <text id="stepCountLabel" />
+    <image id="stepsIcon" href="steps.png" />
+  </g>
   <g id="batteryBox">
     <text id="batteryLabel" />
     <image id="batteryIcon" href="battery.png" />

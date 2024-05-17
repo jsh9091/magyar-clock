@@ -27,9 +27,16 @@
   font-family: System-Regular;
   text-length: 80;
   text-anchor: start;
-  x: 10%;
+  x: 18%;
   y: 20%;
   fill: aqua
+}
+
+#stepsIcon {
+  x: 5%;
+  y: 14%;
+  width: "35";
+  height: "25" 
 }
 
 #batteryLabel {
