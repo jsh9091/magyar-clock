@@ -47,7 +47,7 @@ batteryLabel.text = battery.chargeLevel;
  * @param {*} evt 
  */
 battery.onchange = (charger, evt) => {
-  batteryLabel.text = battery.chargeLevel;
+  batteryLabel.text = battery.chargeLevel + "%";
 };
 
 /**
