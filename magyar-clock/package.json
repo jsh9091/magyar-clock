@@ -1,6 +1,6 @@
 {
   "name": "magyar-clock",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
   "license": "UNLICENSED",
   "devDependencies": {
@@ -9,13 +9,12 @@
   },
   "fitbit": {
     "appUUID": "f158b5f3-a46f-4cec-954c-1fe771920b5c",
-    "appType": "app",
+    "appType": "clockface",
     "appDisplayName": "Magyar Clock",
     "iconFile": "resources/icon.png",
     "wipeColor": "#ffffff",
     "requestedPermissions": [
-      "access_activity",
-      "user-activity"
+      "access_activity"
     ],
     "buildTargets": [
       "atlas",
