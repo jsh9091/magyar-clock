@@ -46,9 +46,15 @@ batteryLabel.text = battery.chargeLevel;
  * @param {*} charger 
  * @param {*} evt 
  */
+
 battery.onchange = (charger, evt) => {
-  batteryLabel.text = battery.chargeLevel + "%";
+  updateBatteryLabel();
 };
+
+function updateBatteryLabel() {
+  let percentSign = "&#x25";
+  batteryLabel.text = battery.chargeLevel + percentSign;
+}
 
 /**
  * Update the display of clock values.
@@ -81,6 +87,8 @@ clock.ontick = (evt) => {
   // display Hungairan words for current time
   hungarianHourLabel.text = `${hungarianNums[hours]}:`;
   hungarianMinuteLabel.text = `${hungarianNums[mins]}`;
+
+  updateBatteryLabel();
 };
 
 /**
