@@ -34,27 +34,11 @@ clock.granularity = "minutes";
 // Get a handle on the <text> elements
 const stepCountLabel = document.getElementById("stepCountLabel");
 const batteryLabel = document.getElementById("batteryLabel");
+const batteryIcon = document.getElementById("batteryIcon");
 const clockLabel = document.getElementById("clockLabel");
 const amPmLabel = document.getElementById("amPmLabel");
 const hungarianHourLabel = document.getElementById("hungarianHourLabel");
 const hungarianMinuteLabel = document.getElementById("hungarianMinuteLabel");
-
-batteryLabel.text = battery.chargeLevel;
-
-/**
- * Update the displayed battery level. 
- * @param {*} charger 
- * @param {*} evt 
- */
-
-battery.onchange = (charger, evt) => {
-  updateBatteryLabel();
-};
-
-function updateBatteryLabel() {
-  let percentSign = "&#x25";
-  batteryLabel.text = battery.chargeLevel + percentSign;
-}
 
 /**
  * Update the display of clock values.
@@ -88,7 +72,7 @@ clock.ontick = (evt) => {
   hungarianHourLabel.text = `${hungarianNums[hours]}:`;
   hungarianMinuteLabel.text = `${hungarianNums[mins]}`;
 
-  updateBatteryLabel();
+  updateBattery();
 };
 
 /**
@@ -116,6 +100,49 @@ function getSteps() {
         ? `${Math.floor(val / 1000)},${("00" + (val % 1000)).slice(-3)}`
         : val,
   };
+}
+
+/**
+ * Update the displayed battery level. 
+ * @param {*} charger 
+ * @param {*} evt 
+ */
+battery.onchange = (charger, evt) => {
+  updateBattery();
+};
+
+/**
+ * Updates the battery battery icon and label.
+ */
+function updateBattery() {
+  updateBatteryLabel();
+  updateBatteryIcon();
+}
+
+/**
+ * Updates the battery lable GUI for battery percentage. 
+ */
+function updateBatteryLabel() {
+  let percentSign = "&#x25";
+  batteryLabel.text = battery.chargeLevel + percentSign;
+}
+
+/**
+ * Updates what battery icon is displayed. 
+ */
+function updateBatteryIcon() {
+  const minFull = 70;
+  const minHalf = 30;
+  
+  if (battery.charging) {
+    batteryIcon.image = "battery-charging.png"
+  } else if (battery.chargeLevel > minFull) {
+    batteryIcon.image = "battery-full.png"
+  } else if (battery.chargeLevel < minFull && battery.chargeLevel > minHalf) {
+    batteryIcon.image = "battery-half.png"
+  } else if (battery.chargeLevel < minHalf) {
+    batteryIcon.image = "battery-low.png"
+  }
 }
 
 /**

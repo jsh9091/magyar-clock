@@ -31,7 +31,7 @@
   </g>
   <g id="batteryBox">
     <text id="batteryLabel" />
-    <image id="batteryIcon" href="battery.png" />
+    <image id="batteryIcon" href="battery-full.png" />
   </g>
   <text id="clockLabel" />
   <text id="amPmLabel" />
