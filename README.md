@@ -6,3 +6,6 @@ This watch-face is designed for Hungarian language learners. Below the standard 
 [Fitbit App Gallery listing](https://gallery.fitbit.com/details/f158b5f3-a46f-4cec-954c-1fe771920b5c?key=13b8215a-6653-4a2f-bbb8-d4d32208b896) 
 
 ![screenshot](Screenshot.png)
+
+
+Note: This watch-face is still available, but is effectively deprecated in favor of [Language Clock](https://github.com/jsh9091/language-clock).
